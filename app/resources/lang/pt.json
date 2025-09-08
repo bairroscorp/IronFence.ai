@@ -1,0 +1,131 @@
+{
+  "login": {
+    "title": "Entrar na sua conta",
+    "description": "Digite seu e-mail e senha abaixo para entrar",
+    "email": "Endereço de e-mail",
+    "email_placeholder": "email@exemplo.com",
+    "password": "Senha",
+    "password_placeholder": "Senha",
+    "forgot": "Esqueceu a senha?",
+    "remember": "Lembrar-me",
+    "button": "Entrar",
+    "signup_text": "Não tem uma conta?",
+    "signup_link": "Cadastre-se"
+  },
+  "welcome": {
+    "title": "Bem-vindo",
+    "dashboard": "Painel",
+    "login": "Entrar",
+    "register": "Registrar-se"
+  },
+  "register": {
+    "title": "Criar uma conta",
+    "description": "Digite seus dados abaixo para criar sua conta",
+    "name": "Nome",
+    "name_placeholder": "Nome completo",
+    "email": "Endereço de e-mail",
+    "email_placeholder": "email@exemplo.com",
+    "password": "Senha",
+    "password_placeholder": "Senha",
+    "confirm_password": "Confirmar senha",
+    "confirm_password_placeholder": "Confirme a senha",
+    "button": "Criar conta",
+    "already_text": "Já tem uma conta?",
+    "login_link": "Entrar"
+  },
+  "appearance": {
+    "title": "Configurações de aparência",
+    "description": "Atualize as configurações de aparência da sua conta"
+  },
+  "password": {
+    "title": "Configurações de senha",
+    "updateTitle": "Atualizar senha",
+    "updateDescription": "Certifique-se de usar uma senha longa e aleatória para manter sua conta segura",
+    "current": "Senha atual",
+    "currentPlaceholder": "Digite sua senha atual",
+    "new": "Nova senha",
+    "newPlaceholder": "Digite a nova senha",
+    "confirm": "Confirmar senha",
+    "confirmPlaceholder": "Confirme a nova senha",
+    "save": "Salvar senha",
+    "saved": "Senha salva com sucesso."
+  },
+  "profile": {
+    "title": "Configurações de perfil",
+    "infoTitle": "Informações do perfil",
+    "infoDescription": "Atualize seu nome e endereço de e-mail",
+    "name": "Nome",
+    "namePlaceholder": "Nome completo",
+    "email": "Endereço de e-mail",
+    "emailPlaceholder": "Digite seu e-mail",
+    "unverified": "Seu endereço de e-mail não foi verificado.",
+    "resendVerification": "Clique aqui para reenviar o e-mail de verificação.",
+    "verificationSent": "Um novo link de verificação foi enviado para o seu e-mail.",
+    "save": "Salvar",
+    "saved": "Salvo."
+  },
+  "settings": {
+    "title": "Configurações",
+    "description": "Gerencie seu perfil e configurações da conta",
+    "profile": "Perfil",
+    "password": "Senha",
+    "appearance": "Aparência"
+  },
+  "userMenu": {
+    "settings": "Configurações",
+    "logout": "Sair"
+  },
+  "kanban": {
+    "title": "Tarefas",
+    "description": "Gerenciamento das tarefas em modo kanban.",
+    "buttons": {
+      "cadastrar": "Cadastrar tarefas",
+      "adicionar": "Adicionar",
+      "deletar": "🗑"
+    },
+    "form": {
+      "titulo": {
+        "label": "Título da tarefa",
+        "placeholder": "Digite o título"
+      },
+      "descricao": {
+        "label": "Descrição",
+        "placeholder": "Digite a descrição"
+      },
+      "data_vencimento": {
+        "label": "Data de vencimento"
+      },
+      "status": {
+        "label": "Status",
+        "options": {
+          "todo": "Pendente",
+          "doing": "Em Progresso",
+          "done": "Concluído"
+        }
+      },
+      "prioridade": {
+        "label": "Prioridade",
+        "options": {
+          "baixa": "Baixa",
+          "media": "Média",
+          "alta": "Alta"
+        }
+      },
+      "usuario_responsavel": {
+        "label": "Responsável"
+      }
+    },
+    "kanban_columns": {
+      "todo": "Pendente",
+      "doing": "Em Progresso",
+      "done": "Concluído"
+    },
+    "labels": {
+      "data_vencimento": "vencimento",
+      "prioridade": "prioridade",
+      "responsavel": "responsável"
+    },
+    "confirm_delete": "Tem certeza que deseja excluir a tarefa \"{titulo}\"?",
+    "error_delete": "Erro ao deletar a tarefa."
+  }
+}

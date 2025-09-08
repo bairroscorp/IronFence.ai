@@ -1,0 +1,131 @@
+{
+    "login": {
+        "title": "Log in to your account",
+        "description": "Enter your email and password below to log in",
+        "email": "Email address",
+        "email_placeholder": "email@example.com",
+        "password": "Password",
+        "password_placeholder": "Password",
+        "forgot": "Forgot password?",
+        "remember": "Remember me",
+        "button": "Log in",
+        "signup_text": "Don't have an account?",
+        "signup_link": "Sign up"
+    },
+    "welcome": {
+        "title": "Welcome",
+        "dashboard": "Dashboard",
+        "login": "Log in",
+        "register": "Register"
+    },
+    "register": {
+        "title": "Create an account",
+        "description": "Enter your details below to create your account",
+        "name": "Name",
+        "name_placeholder": "Full name",
+        "email": "Email address",
+        "email_placeholder": "email@example.com",
+        "password": "Password",
+        "password_placeholder": "Password",
+        "confirm_password": "Confirm password",
+        "confirm_password_placeholder": "Confirm password",
+        "button": "Create account",
+        "already_text": "Already have an account?",
+        "login_link": "Log in"
+    },
+    "appearance": {
+        "title": "Appearance settings",
+        "description": "Update your account's appearance settings"
+    },
+    "password": {
+        "title": "Password settings",
+        "updateTitle": "Update password",
+        "updateDescription": "Ensure your account is using a long, random password to stay secure",
+        "current": "Current password",
+        "currentPlaceholder": "Enter your current password",
+        "new": "New password",
+        "newPlaceholder": "Enter your new password",
+        "confirm": "Confirm password",
+        "confirmPlaceholder": "Re-enter your new password",
+        "save": "Save password",
+        "saved": "Saved."
+    },
+    "profile": {
+        "title": "Profile settings",
+        "infoTitle": "Profile information",
+        "infoDescription": "Update your name and email address",
+        "name": "Name",
+        "namePlaceholder": "Full name",
+        "email": "Email address",
+        "emailPlaceholder": "Enter your email",
+        "unverified": "Your email address is unverified.",
+        "resendVerification": "Click here to resend the verification email.",
+        "verificationSent": "A new verification link has been sent to your email address.",
+        "save": "Save",
+        "saved": "Saved."
+    },
+    "settings": {
+        "title": "Settings",
+        "description": "Manage your profile and account settings",
+        "profile": "Profile",
+        "password": "Password",
+        "appearance": "Appearance"
+    },
+    "userMenu": {
+        "settings": "Settings",
+        "logout": "Log out"
+    },
+    "kanban": {
+        "title": "Tasks",
+        "description": "Manage tasks in Kanban mode.",
+        "buttons": {
+            "cadastrar": "Add Task",
+            "adicionar": "Add",
+            "deletar": "🗑"
+        },
+        "form": {
+            "titulo": {
+                "label": "Task title",
+                "placeholder": "Enter the title"
+            },
+            "descricao": {
+                "label": "Description",
+                "placeholder": "Enter the description"
+            },
+            "data_vencimento": {
+                "label": "Due date"
+            },
+            "status": {
+                "label": "Status",
+                "options": {
+                    "todo": "To Do",
+                    "doing": "In Progress",
+                    "done": "Done"
+                }
+            },
+            "prioridade": {
+                "label": "Priority",
+                "options": {
+                    "baixa": "Low",
+                    "media": "Medium",
+                    "alta": "High"
+                }
+            },
+            "usuario_responsavel": {
+                "label": "Responsible"
+            }
+        },
+        "kanban_columns": {
+            "todo": "To Do",
+            "doing": "In Progress",
+            "done": "Done"
+        },
+        "labels": {
+            "data_vencimento": "Due date",
+            "prioridade": "Priority",
+            "responsavel": "Responsible"
+        },
+        "confirm_delete": "Are you sure you want to delete the task \"{titulo}\"?",
+        "error_delete": "Error deleting the task."
+    }
+}
