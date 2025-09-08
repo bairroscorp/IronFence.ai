@@ -258,18 +258,30 @@ export default {
       this.options_users = (await axios.get("/tarefas/option_users")).data;
     },
     async criarTarefa() {
-      const { data } = await axios.post("/tarefas", this.novaTarefa);
+      try {
+        const { data } = await axios.post("/tarefas", this.novaTarefa);
 
-      // joga a tarefa direto na coluna escolhida
-      this.columns.find((c) => c.key === this.novaTarefa.status).tasks.push(data);
+        // Se veio warning, exibe alerta
+        if (data.warning) {
+          alert(data.warning);
+        } else {
+          // joga a tarefa direto na coluna escolhida
+          this.columns.find((c) => c.key === this.novaTarefa.status).tasks.push(data);
 
-      // limpa o form
-      this.novaTarefa.titulo = "";
-      this.novaTarefa.descricao = "";
-      this.novaTarefa.data_vencimento = null;
-      this.novaTarefa.status = "todo";
-      this.novaTarefa.prioridade = "baixa";
-      this.novaTarefa.usuario_responsavel = null;
+          // limpa o form
+          this.novaTarefa.titulo = "";
+          this.novaTarefa.descricao = "";
+          this.novaTarefa.data_vencimento = null;
+          this.novaTarefa.status = "todo";
+          this.novaTarefa.prioridade = "baixa";
+          this.novaTarefa.usuario_responsavel = null;
+
+          alert("Tarefa criada com sucesso!");
+        }
+      } catch (error) {
+        console.error(error);
+        alert("Ocorreu um erro ao criar a tarefa.");
+      }
     },
     async onDrop(newStatus, event) {
       let task = null;
