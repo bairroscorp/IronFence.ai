@@ -36,6 +36,12 @@ class TarefaController extends Controller
             'usuario_responsavel' => 'nullable|string',
         ]);
 
+        if ($feriados->isFeriado($request->data_vencimento)) {
+            return response()->json([
+                'warning' => 'A data escolhida é um feriado!',
+            ], 200);
+        }
+
         $tarefa = Tarefa::create(
             [
                 'titulo' => $data['titulo'],
@@ -47,20 +53,14 @@ class TarefaController extends Controller
                 'associacao_usuario_criador_id' => Auth::user()->id
             ]
         );
- 
+
         if (!is_null($tarefa->usuario_responsavel)) {
-      
+
             // Dispara email
             Mail::to($tarefa->usuario_responsavel)->queue(new TarefaAtribuidaMail($tarefa));
 
             // Dispara evento WebSocket
             event(new TarefaAtribuida($tarefa));
-        }
-     
-        if ($feriados->isFeriado($request->data_vencimento)) {
-            return response()->json([
-                'warning' => 'A data escolhida é um feriado!',
-            ], 200);
         }
 
         return response()->json($tarefa);
