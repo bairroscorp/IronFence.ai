@@ -47,14 +47,14 @@ class TarefaController extends Controller
                 'associacao_usuario_criador_id' => Auth::user()->id
             ]
         );
-
+ 
         if (!is_null($tarefa->usuario_responsavel)) {
+      
+            // Dispara email
+            Mail::to($tarefa->usuario_responsavel)->queue(new TarefaAtribuidaMail($tarefa));
 
             // Dispara evento WebSocket
             event(new TarefaAtribuida($tarefa));
-
-            // Dispara email
-            Mail::to(is_null($tarefa->usuario_responsavel))->queue(new TarefaAtribuidaMail($tarefa));
         }
      
         if ($feriados->isFeriado($request->data_vencimento)) {
