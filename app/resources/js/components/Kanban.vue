@@ -276,7 +276,6 @@ export default {
           this.novaTarefa.prioridade = "baixa";
           this.novaTarefa.usuario_responsavel = null;
 
-          alert("Tarefa criada com sucesso!");
         }
       } catch (error) {
         console.error(error);

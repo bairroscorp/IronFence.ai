@@ -11,13 +11,17 @@ class FeriadoService
     {
         return Cache::remember("feriados:$ano:$estado", 86400, function () use ($ano, $estado) {
             $apiKey = env('INVERTEXTO_API_KEY');
-            $url = "https://api.invertexto.com/api-feriados?ano={$ano}&token={$apiKey}&estado={$estado}";
+            $url = "https://api.invertexto.com/v1/holidays/{$ano}?token={$apiKey}&state={$estado}";
 
             $response = Http::get($url);
 
-            $data = $response->successful() ? $response->json() : [];
+            if (!$response->successful()) {
+                dd('Erro na chamada API', $response->status(), $response->body());
+            }
 
-            return is_array($data) ? $data : []; // garante sempre array
+            $data = $response->json();
+
+            return is_array($data) ? $data : [];
         });
     }
 
@@ -26,7 +30,7 @@ class FeriadoService
         $ano = date('Y', strtotime($data));
 
         $feriados = $this->getFeriados($ano, $estado);
-
+        
         if (!is_array($feriados)) {
             $feriados = [];
         }

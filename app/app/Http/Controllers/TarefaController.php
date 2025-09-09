@@ -56,7 +56,7 @@ class TarefaController extends Controller
             // Dispara email
             Mail::to(is_null($tarefa->usuario_responsavel))->queue(new TarefaAtribuidaMail($tarefa));
         }
-
+     
         if ($feriados->isFeriado($request->data_vencimento)) {
             return response()->json([
                 'warning' => 'A data escolhida é um feriado!',
