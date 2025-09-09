@@ -3,6 +3,7 @@
 use App\Http\Controllers\TarefaController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Laravel\Horizon\Horizon;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
@@ -18,6 +19,11 @@ Route::post('/tarefas', [TarefaController::class, 'store'])->middleware(['auth',
 Route::get('/tarefas/option_users', [TarefaController::class, 'getOptionUsers'])->middleware(['auth', 'verified']);
 Route::delete('/tarefas/delete/{id}', [TarefaController::class, 'deletar'])->middleware(['auth', 'verified']);
 
+Route::middleware(['auth'])->group(function () {
+    Horizon::auth(function ($request) {
+        return true; // libera acesso para qualquer usuário (teste apenas)
+    });
+});
 
-require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';
+require __DIR__ . '/settings.php';
+require __DIR__ . '/auth.php';
